@@ -449,7 +449,6 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
 
 
 @media (max-width: 768px) {
-  
     body {
         background: url(https://rene-huber.eu/links/web_huber.webp) 167% -33% / 357px auto  no-repeat, 
                     linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -567,41 +566,18 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 7px;
+    gap: 8px;
     padding: 20px 24px;
 }
 
-.expandable-content:not(.active) .portfolio-item {
-    pointer-events: none;
-}
-
-.expandable-content.active .portfolio-item {
-    pointer-events: auto;
-}
-
-.portfolio-description {
-    padding: 20px 24px 10px;
-    text-align: center;
-}
-
-.portfolio-description p {
-    color: var(--text-light);
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-}
-
 .portfolio-item {
-    
-    background: transparent;
-    border-radius: 4px;
+    aspect-ratio: 1;
+    background: #333;
+    border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s ease;
     position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
 }
 
 .portfolio-item:hover {
@@ -675,55 +651,17 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
     transition: max-height 0.5s ease, padding 0.3s ease;
     background: rgba(0, 0, 0, 0.13);
     border-radius: 0 0 16px 16px;
-    padding: 0 3px;
+    padding: 0 24px;
 }
 
 .expandable-content.active,
 .nested-content.active {
     max-height: 800px; /* Ajusta si tu contenido es más largo */
-    padding: 20px 9px;
-}
-
-.portfolio-buttons {
-    display: none !important; /* Forzar oculto en mobile */
     padding: 20px 24px;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
 }
 
-.portfolio-nav-btn {
-    padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    color: var(--text);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.portfolio-nav-btn:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-}
-
-/* Mostrar solo en desktop con mayor especificidad */
-@media (min-width: 769px) {
-    .expandable-content .portfolio-buttons {
-        display: flex !important;
-    }
-}
 @media (max-width: 640px) {
-    
     .portfolio-grid {
-        padding: 15px 7px;
+        padding: 15px 20px;
     }
 }
-
-
