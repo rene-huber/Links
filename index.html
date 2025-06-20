@@ -121,25 +121,33 @@
                     <div class="link-arrow">↓</div>
                 </div>
                 <div class="expandable-content">
+                    <div class="portfolio-description">
+                        <p>Showcase of my latest projects and creative work demonstrating modern web development.</p>
+                    </div>
                     <div class="portfolio-grid">
-                        <div class="portfolio-item" onclick="openPortfolioModal('https://cms-server.rene-huber.eu//media/flor2.jpg')">
-                            <img src="https://cms-server.rene-huber.eu//media/flor2.jpg" alt="Project 1">
+                        <div class="portfolio-item" onclick="openPortfolioModal('https://rene-huber.eu/images/undulcito_web.webp')">
+                            <img src="https://rene-huber.eu/images/dulce25.gif" alt="Project 1">
+                            <p>Showcase o.</p>
                         </div>
-                        <div class="portfolio-item" onclick="openPortfolioModal('https://cms-server.rene-huber.eu//media/flor2.jpg')">
-                            <img src="https://cms-server.rene-huber.eu//media/flor2.jpg" alt="Project 2">
+                        <div class="portfolio-item" onclick="openPortfolioModal('https://rene-huber.eu/images/undulcito_web.webp')">
+                            <img src="https://rene-huber.eu/images/dulce25.gif" alt="Project 1">
                         </div>
-                        <div class="portfolio-item" onclick="openPortfolioModal('https://cms-server.rene-huber.eu//media/flor2.jpg')">
-                            <img src="https://cms-server.rene-huber.eu//media/flor2.jpg" alt="Project 3">
+                        <div class="portfolio-item" onclick="openPortfolioModal('https://rene-huber.eu/images/undulcito_web.webp')">
+                            <img src="https://rene-huber.eu/images/dulce25.gif" alt="Project 1">
                         </div>
-                        <div class="portfolio-item" onclick="openPortfolioModal('https://cms-server.rene-huber.eu//media/flor2.jpg')">
-                            <img src="https://cms-server.rene-huber.eu//media/flor2.jpg" alt="Project 4">
+                        <div class="portfolio-item" onclick="openPortfolioModal('https://rene-huber.eu/images/undulcito_web.webp')">
+                            <img src="https://rene-huber.eu/images/dulce25.gif" alt="Project 1">
                         </div>
-                        <div class="portfolio-item" onclick="openPortfolioModal('https://cms-server.rene-huber.eu//media/flor2.jpg')">
-                            <img src="https://cms-server.rene-huber.eu//media/flor2.jpg" alt="Project 5">
+                        <div class="portfolio-item" onclick="openPortfolioModal('https://rene-huber.eu/images/undulcito_web.webp')">
+                            <img src="https://rene-huber.eu/images/dulce25.gif" alt="Project 1">
                         </div>
-                        <div class="portfolio-item" onclick="openPortfolioModal('https://cms-server.rene-huber.eu//media/flor2.jpg')">
-                            <img src="https://cms-server.rene-huber.eu//media/flor2.jpg" alt="Project 6">
+                        <div class="portfolio-item" onclick="openPortfolioModal('https://rene-huber.eu/images/undulcito_web.webp')">
+                            <img src="https://rene-huber.eu/images/dulce25.gif" alt="Project 1">
                         </div>
+                    </div>
+                    <div class="portfolio-buttons">
+                        <a href="https://portfolio1.rene-huber.eu" target="_blank" class="portfolio-nav-btn">Portfolio 1</a>
+                        <a href="https://portfolio2.rene-huber.eu" target="_blank" class="portfolio-nav-btn">Portfolio 2</a>
                     </div>
                 </div>
             </div>
@@ -245,54 +253,7 @@
 
     <script src="script.js"></script>
     <script>
-        // JavaScript adicional para las nuevas funcionalidades
-        function toggleNested(element) {
-            const content = element.nextElementSibling;
-            const arrow = element.querySelector('.nested-arrow');
-            const isActive = content.classList.contains('active');
-            
-            // Cerrar otros elementos anidados en el mismo padre
-            const parent = element.closest('.expandable-content');
-            parent.querySelectorAll('.nested-content.active').forEach(item => {
-                if (item !== content) {
-                    item.classList.remove('active');
-                    item.previousElementSibling.querySelector('.nested-arrow').textContent = '↓';
-                }
-            });
-            
-            if (isActive) {
-                content.classList.remove('active');
-                arrow.textContent = '↓';
-            } else {
-                content.classList.add('active');
-                arrow.textContent = '↑';
-            }
-        }
-
-        function openPortfolioModal(imageSrc) {
-            const modal = document.getElementById('portfolioModal');
-            const modalImg = document.getElementById('portfolioModalImg');
-            
-            modalImg.src = imageSrc;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closePortfolioModal() {
-            const modal = document.getElementById('portfolioModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Cerrar modal de portfolio con Escape
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const portfolioModal = document.getElementById('portfolioModal');
-                if (portfolioModal && portfolioModal.style.display === 'block') {
-                    closePortfolioModal();
-                }
-            }
-        });
+ 
     </script>
 </body>
 </html>
