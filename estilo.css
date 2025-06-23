@@ -630,12 +630,13 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
 
 .portfolio-modal-info a {
     color: white !important;
-    background: #155979;
+    background: #0a2633;
     border-radius: 5px;
-    padding: 3px 5px;
+    padding: 3px 9px;
     font-size: 11px;
     text-decoration: none;
-    margin-left: 5px
+    margin-left: 5px;
+    border: 1px solid #00dac2;
 }
 
 .portfolio-modal-info h3{ font-weight:200; margin-left: 5px}
