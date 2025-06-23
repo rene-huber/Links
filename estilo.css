@@ -566,18 +566,21 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 20px 24px;
+    gap: 5px;
+    padding: 20px 15px;
 }
 
 .portfolio-item {
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
     background: #333;
-    border-radius: 8px;
+    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s ease;
     position: relative;
+    height: 70px;
+    width: auto;
+    box-shadow: 2px 2px 11px #0000004a;
 }
 
 .portfolio-item:hover {
@@ -588,6 +591,8 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 1px solid #9f9f9f;
+    border-radius: 7px;
 }
 
 .portfolio-modal {
@@ -598,7 +603,7 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgb(0 0 0 / 91%);
     cursor: pointer;
 }
 
@@ -607,16 +612,35 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%;
-    max-height: 90%;
+    /* max-width: 90%; */
+    /* max-height: 90%; */
     border-radius: 12px;
-    overflow: auto; /* Permite el desplazamiento si el contenido es más grande */
-    background: #000; /* fondo opcional para que el scroll se vea mejor */
-    padding: 10px; /* espacio interior para que no se pegue al borde */
+    overflow: auto;
+    background: #000;
+    padding: 5px 16px 0px 10px;
     box-sizing: border-box;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: #888 transparent; /* color de la barra y fondo */
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    color: white;
+    width: 69%;
+    height: 83%;
+    border: 1px solid #373737;
 }
+
+.portfolio-modal-info a {
+    color: white !important;
+    background: #155979;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 5px
+}
+
+.portfolio-modal-info h3{ font-weight:200; margin-left: 5px}
+
+.portfolio-modal-info p{ font-weight:200; font-size: 13px; margin-bottom: 10px; color:green;
+margin-left: 5px}
 
 /* Chrome, Safari y Edge */
 .portfolio-modal-content::-webkit-scrollbar {
@@ -660,8 +684,38 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
     padding: 20px 24px;
 }
 
+.portfolio-buttons{display: block;}
+
+.portfolio-close{    border-radius: 50%;
+    background: red;
+    padding: 0 5px;}
+
 @media (max-width: 640px) {
     .portfolio-grid {
-        padding: 15px 20px;
+        padding: 15px 5px;
+        gap: 7px;
+    }
+    .portfolio-buttons{display: none;}
+}
+
+.sphere {
+    position: absolute;
+    width: 50vw; /* 50% del ancho de la pantalla */
+    height: 50vw; /* Mantiene proporción circular */
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #333333, #222222, #111111); /* Gradiente con 3 tonos más claros que negro */
+    animation: move 10s ease-in-out infinite;
+    z-index: 99;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    50% {
+        transform: translate(20%, 20%) scale(1.2);
+    }
+    100% {
+        transform: translate(0%, 0%) scale(1);
     }
 }
