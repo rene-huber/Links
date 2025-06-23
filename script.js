@@ -4,47 +4,47 @@ const portfolioData = [
         id: 'project1',
         image: 'https://rene-huber.eu/images/dulce25.gif',
         modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
-        url: 'https://rene-huber.eu',
+        url: 'https://undulcito.com',
         title: 'Proyecto 1 - E-commerce',
         description: 'Tienda online desarrollada con React y Node.js'
     },
     {
         id: 'project2',
-        image: 'https://rene-huber.eu/images/dulce25.gif',
-        modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
-        url: 'https://portfolio2.rene-huber.eu',
+        image: 'https://rene-huber.eu/images/pressure_25.gif',
+        modalImage: 'https://rene-huber.eu/images/pressurewasser_web.webp',
+        url: 'https://pressurewashertotalcleaner.com/',
         title: 'Proyecto 2 - Web App',
         description: 'Aplicación web con dashboard administrativo'
     },
     {
         id: 'project3',
-        image: 'https://rene-huber.eu/images/dulce25.gif',
-        modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
-        url: 'https://github.com/rene-huber',
+        image: 'https://rene-huber.eu/images/pool-tapa.gif',
+        modalImage: 'https://rene-huber.eu/images/pool_1.webp',
+        url: 'https://poolfusion.de/',
         title: 'Proyecto 3 - Mobile App',
         description: 'App móvil desarrollada con React Native'
     },
     {
         id: 'project4',
-        image: 'https://rene-huber.eu/images/dulce25.gif',
-        modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
+        image: 'https://rene-huber.eu/images/franelas.gif',
+        modalImage: 'https://rene-huber.eu/images/cartel_S1.webp',
         url: 'https://cartel-berlin.shop',
         title: 'Proyecto 4 - Landing Page',
         description: 'Página de aterrizaje con animaciones CSS'
     },
     {
         id: 'project5',
-        image: 'https://rene-huber.eu/images/dulce25.gif',
-        modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
-        url: 'https://subcultours.com',
+        image: 'https://rene-huber.eu/images/hypnosisl.gif',
+        modalImage: 'https://rene-huber.eu/images/hypnosis.png',
+        url: 'https://bitacorahypnosis.com/',
         title: 'Proyecto 5 - CMS',
         description: 'Sistema de gestión de contenidos personalizado'
     },
     {
         id: 'project6',
-        image: 'https://rene-huber.eu/images/dulce25.gif',
-        modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
-        url: 'https://www.instagram.com/huberpro/',
+        image: 'https://rene-huber.eu/images/yate.gif',
+        modalImage: 'https://rene-huber.eu/images/yate.png',
+        url: 'https://myyachtstore.com/',
         title: 'Proyecto 6 - API REST',
         description: 'API robusta para aplicaciones móviles'
     }
