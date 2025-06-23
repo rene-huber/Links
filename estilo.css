@@ -625,6 +625,7 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
     width: 69%;
     height: 83%;
     border: 1px solid #373737;
+    box-shadow: 6px 7px 5px #000000;
 }
 
 .portfolio-modal-info a {
@@ -687,7 +688,7 @@ margin-left: 5px}
 .portfolio-buttons{display: block;}
 
 .portfolio-close{    border-radius: 50%;
-    background: red;
+    background: #1b5f16;
     padding: 0 5px;}
 
 @media (max-width: 640px) {
