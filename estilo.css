@@ -665,3 +665,25 @@ background: linear-gradient(to bottom,  rgba(255,255,255,0.51) 0%,rgba(255,255,2
         padding: 15px 20px;
     }
 }
+
+.sphere {
+    position: absolute;
+    width: 50vw; /* 50% del ancho de la pantalla */
+    height: 50vw; /* Mantiene proporción circular */
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #333333, #222222, #111111); /* Gradiente con 3 tonos más claros que negro */
+    animation: move 10s ease-in-out infinite;
+    z-index: 99;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    50% {
+        transform: translate(20%, 20%) scale(1.2);
+    }
+    100% {
+        transform: translate(0%, 0%) scale(1);
+    }
+}
