@@ -5,48 +5,48 @@ const portfolioData = [
         image: 'https://rene-huber.eu/images/dulce25.gif',
         modalImage: 'https://rene-huber.eu/images/undulcito_web.webp',
         url: 'https://undulcito.com',
-        title: 'Proyecto 1 - E-commerce',
-        description: 'Tienda online desarrollada con React y Node.js'
+        title: 'www.undulcito.com',
+        description: 'Online store, Wordpress'
     },
     {
         id: 'project2',
         image: 'https://rene-huber.eu/images/pressure_25.gif',
         modalImage: 'https://rene-huber.eu/images/pressurewasser_web.webp',
         url: 'https://pressurewashertotalcleaner.com/',
-        title: 'Proyecto 2 - Web App',
-        description: 'Aplicación web con dashboard administrativo'
+        title: 'pressurewashertotalcleaner.com',
+        description: 'Landing page , Wordpress'
     },
     {
         id: 'project3',
         image: 'https://rene-huber.eu/images/pool-tapa.gif',
         modalImage: 'https://rene-huber.eu/images/pool_1.webp',
         url: 'https://poolfusion.de/',
-        title: 'Proyecto 3 - Mobile App',
-        description: 'App móvil desarrollada con React Native'
+        title: 'www.poolfusion.de',
+        description: 'Landing Page, Wordpress'
     },
     {
         id: 'project4',
         image: 'https://rene-huber.eu/images/franelas.gif',
         modalImage: 'https://rene-huber.eu/images/cartel_S1.webp',
         url: 'https://cartel-berlin.shop',
-        title: 'Proyecto 4 - Landing Page',
-        description: 'Página de aterrizaje con animaciones CSS'
+        title: 'www.Cartel-berlin.shop',
+        description: 'Online Shop - Clothes'
     },
     {
         id: 'project5',
         image: 'https://rene-huber.eu/images/hypnosisl.gif',
         modalImage: 'https://rene-huber.eu/images/hypnosis.png',
         url: 'https://bitacorahypnosis.com/',
-        title: 'Proyecto 5 - CMS',
-        description: 'Sistema de gestión de contenidos personalizado'
+        title: 'www.bitacorahypnosis.com',
+        description: 'landing page for booking, Wordpress'
     },
     {
         id: 'project6',
         image: 'https://rene-huber.eu/images/yate.gif',
         modalImage: 'https://rene-huber.eu/images/yate.png',
         url: 'https://myyachtstore.com/',
-        title: 'Proyecto 6 - API REST',
-        description: 'API robusta para aplicaciones móviles'
+        title: 'www.myyachtstore.com',
+        description: 'Landing Page, Wordpress'
     }
 ];
 
@@ -155,27 +155,29 @@ function initializePortfolio() {
     });
 }
 
-// Updated portfolio modal function to handle project data
+// Updated portfolio modal function to handle project data// Función actualizada para abrir el modal del portfolio con contenido centrado
 function openPortfolioModal(project) {
     const modal = document.getElementById('portfolioModal');
-    const modalImg = document.getElementById('portfolioModalImg');
     const modalContent = modal.querySelector('.portfolio-modal-content');
     
     // Clear existing content
     modalContent.innerHTML = '';
     
-    // Create modal content with image and visit button
+    // Create modal content with centered layout
     modalContent.innerHTML = `
-        <div class="portfolio-modal-header">
+        <div class="portfolio-modal-footer">
             <span class="portfolio-close" onclick="closePortfolioModal()">&times;</span>
         </div>
+        
+        <div class="portfolio-modal-header">
+            <h3 class="titulo">${project.title}</h3>  
+        </div>
+        
         <div class="portfolio-modal-body">
             <img src="${project.modalImage}" alt="${project.title}" class="portfolio-modal-img">
             <div class="portfolio-modal-info">
-                <h3>${project.title}</h3>
                 <p>${project.description}</p>
-                <a href="${project.url}" target="_blank" class="visit-project-btn">
-               
+                <a href="${project.url}" target="_blank" class="visit-project-btn">               
                     View Project
                 </a>
             </div>
